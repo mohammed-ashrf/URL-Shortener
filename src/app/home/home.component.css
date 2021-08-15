@@ -1,0 +1,41 @@
+.Get-Started {
+    background-color:  hsl(180, 66%, 49%);
+    border-radius: 25px;
+    color: white;
+}
+.Starter-Text-Div {
+    max-width: 350px;
+    margin: auto;
+}
+.starter-header {
+    font-size: 50px;
+    font-weight: 900;
+}
+.input-container {
+    background-color: hsl(257, 27%, 26%);
+    background-image: url(src\assets\images\bg-shorten-desktop.svg);
+    border-radius: 6px;
+    z-index: 1000;
+    padding: 15px;
+    height: 100px;
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+    border-color: hsl(0, 0%, 59%);
+    border-width: 5px;
+}
+#shorten-input {
+    height: 20px;
+    border-radius: 6px;
+    width: 80%;
+    padding: 10px;
+    outline: none;
+    cursor: pointer;
+}
+.shorten-button {
+    color: #fff;
+    background-color: hsl(180, 66%, 49%);
+}
+#advanced-statistics-Section {
+    background-color: hsl(0, 0%, 90%);
+}

@@ -1,0 +1,18 @@
+.footer-container{
+    background-color: #000;
+    height: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.footer {
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 1100px;
+}
+.white {
+    color: #fff;
+}
+.Gray {
+    color: hsl(0, 0%, 75%);
+}

@@ -1,0 +1,19 @@
+.toolbar {
+    max-width: 1100px;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.link {
+    color: hsl(0, 0%, 75%);
+    cursor: pointer;
+}
+.login {
+    border-radius: 25px;
+    color: hsl(0, 0%, 75%);
+}
+.SignUp {
+    background-color:  hsl(180, 66%, 49%);
+    border-radius: 25px;
+    color: white;
+}
