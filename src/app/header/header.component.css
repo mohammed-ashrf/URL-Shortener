@@ -1,8 +1,8 @@
 .toolbar {
     width: 85%;
     margin: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 70px;
 }
 .link {
     color: hsl(0, 0%, 75%);

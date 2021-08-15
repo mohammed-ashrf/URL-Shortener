@@ -7,7 +7,7 @@
     max-width: 350px;
     margin-right: auto;
 }
-.starter-header {
+#starter-header {
     font-size: 50px;
     font-weight: 900;
 }
@@ -46,9 +46,29 @@
     color: #fff;
     background-color: hsl(180, 66%, 49%);
 }
+#output {
+    background-color: #fff;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 7px;
+    border-radius: 6px;
+}
+#output a {
+    text-decoration: none;
+    color: #000;
+}
+/* .right-section-output a:first-of-type {
+    text-decoration: none;
+    color: hsl(180, 66%, 49%);
+} */
 #advanced-statistics-Section {
     background-color: hsl(0, 0%, 90%);
     padding-bottom: 70px;
+    margin: 0;
+}
+.Advanced-Sattistics-text-div h2 {
+    font-size: 40px;
     margin: 0;
 }
 .Gray {

@@ -1,9 +1,9 @@
 <!-- start of upper section of the home -->
 <div fxLayout="row" class="get-started-div"
 fxLayoutAlign="space-between center"
-fxLayoutGap="20px">
+fxLayoutGap="30px">
   <div class="Starter-Text-Div">
-    <h2 class="starter-header">More than just <br> shorter links</h2>
+    <h2 id="starter-header">More than just <br> shorter links</h2>
     <p>Bulid your brand's recognition and get detailed
       insights on how your links are performing.
     </p>
@@ -18,8 +18,26 @@ fxLayoutGap="20px">
   <div class="input-container"
   fxLayout="row"
   fxLayoutAlign="space-between center">
-  <input type="text" placeholder="Shorten a link here..." id="shorten-input">
-  <a mat-button class="shorten-button">Shorten it!</a>
+  <input type="text" placeholder="Shorten a link here..." id="shorten-input" (keyup.enter)="onClick()">
+  <a mat-button class="shorten-button" (click)="onClick()">Shorten it!</a>
+  </div>
+  <!-- output start -->
+  <div id="output" *ngIf="isShorted" fxLayout="row"
+    fxLayoutAlign="space-between center">
+    <a href={{originalLink}} target="_blank">{{originalLink}}</a>
+    <div class="right-section-output"
+    fxFlex fxLayout="row"
+      fxLayoutAlign="end center"
+      fxLayoutGap="10px">
+      <a href={{shortenLink}} target="_blank" style="color:aqua;" id="shortenLink">{{shortenLink}}</a>
+      <a mat-button class="shorten-button" (click)=" copytext()">copy</a>
+    </div>
+  </div>
+  <!-- output end -->
+  <!-- error massages -->
+  <div *ngIf="errMess">
+    <h2>Error</h2>
+    <h4>{{errMess}}</h4>
   </div>
   <!-- end of middle input -->
   <!-- advanced statistics text start -->

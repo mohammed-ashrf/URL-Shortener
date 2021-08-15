@@ -4,12 +4,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animatio
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
-
+import { HttpClientModule } from '@angular/common/http';
+import { ClipboardModule } from 'ngx-clipboard';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 
+import { ProcessHttpmsgService } from './services/process-httpmsg.service';
+import { ShortcodeService } from './services/shortcode.service';
+import { IpAddressService } from './services/ip-address.service';
 
 import 'hammerjs';
 
@@ -25,9 +29,15 @@ import 'hammerjs';
     BrowserAnimationsModule,
     MatToolbarModule,
     FlexLayoutModule,
-    MatButtonModule 
+    MatButtonModule,
+    HttpClientModule,
+    ClipboardModule 
   ],
-  providers: [],
+  providers: [
+    ProcessHttpmsgService,
+    ShortcodeService,
+    IpAddressService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
