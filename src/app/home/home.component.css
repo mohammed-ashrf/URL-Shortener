@@ -5,22 +5,32 @@
 }
 .Starter-Text-Div {
     max-width: 350px;
-    margin: auto;
+    margin-right: auto;
 }
 .starter-header {
     font-size: 50px;
     font-weight: 900;
 }
+.get-started-div {
+    padding-bottom: 100px;
+    width: 92%;
+    margin-left: auto;
+}
 .input-container {
+    background: url(src\assets\images\bg-shorten-desktop.svg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     background-color: hsl(257, 27%, 26%);
-    background-image: url(src\assets\images\bg-shorten-desktop.svg);
     border-radius: 6px;
     z-index: 1000;
     padding: 15px;
-    height: 100px;
-    max-width: 1100px;
+    height: 125px;
+    width: 85%;
     margin: auto;
     position: relative;
+    top: -50px;
     border-color: hsl(0, 0%, 59%);
     border-width: 5px;
 }
@@ -38,4 +48,75 @@
 }
 #advanced-statistics-Section {
     background-color: hsl(0, 0%, 90%);
+    padding-bottom: 70px;
+    margin: 0;
+}
+.Gray {
+    color: hsl(0, 0%, 60%);
+}
+.cards {
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+.Svg {
+    background-color: hsl(257, 27%, 26%);
+    border-radius: 55%;
+    z-index: 1000;
+    position: relative;
+    top: -50px;
+    width: 75px;
+    height: 75px;
+    justify-content: center;
+    text-align: center;
+}
+.Svg svg {
+    padding-top: 16px;
+    text-align: center;
+    justify-self: center;
+    
+}
+.card-text{
+    position: relative;
+    top: -30px;
+}
+.space {
+    background-color: hsl(180, 66%, 49%);
+    height: 7px;
+    width: 40px;
+    margin-top: 130px;
+}
+.brand-recoginition{
+    height: fit-content;
+    width: 70%;
+}
+.detailed-records {
+    margin-top: 35px;
+    height: fit-content;
+    width: 70%;
+}
+.fully-cusomizable {
+    margin-top: 63px;
+    height: fit-content;
+    width: 70%;
+}
+.Boost-Section {
+    background: url(src\assets\images\bg-boost-desktop.svg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: hsl(257, 27%, 26%);
+    height: 200px;
+}
+.Boost-Section h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 40px;
 }
