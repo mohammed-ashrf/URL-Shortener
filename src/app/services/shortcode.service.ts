@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { ProcessHttpmsgService } from './process-httpmsg.service';
 import { catchError } from 'rxjs/operators';
+import { shortLinkArray } from '../shared/shortLinkArray';
 
 @Injectable({
   providedIn: 'root'
@@ -27,5 +28,8 @@ export class ShortcodeService {
       let url = `https://api.shrtco.de/v2/shorten?url=${link}`;
       return this.http.post(url,res)
       .pipe(catchError(this.processHTTPMsgService.handleError));
+    }
+    getRelativeContent(ip) {
+      return shortLinkArray.filter((dish) => (dish.ip == ip));
     }
 }

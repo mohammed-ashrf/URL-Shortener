@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   output:any;
   errMess: string;
   link:any;
-  ipaddress:any;
+  ipaddress:string;
   shortenLink:any;
   originalLink:any;
   LinksObject:any;
@@ -24,14 +24,16 @@ export class HomeComponent implements OnInit {
   Info:any;
   copiedLink:any;
   content:string;
-  shortLinkArray = shortLinkArray;
+  shortLinkArray;
   constructor(private shortcodeService: ShortcodeService,
     private ipAdressService: IpAddressService) { }
 
   ngOnInit() {
     this.ipAdressService.getIpAddress().subscribe(res => {
       this.ipaddress = res['ip'];
+      console.log(`${this.ipaddress}`);
     });
+    this.shortLinkArray = this.shortcodeService.getRelativeContent(this.ipaddress);
   }
 
   // copytext() {
@@ -46,8 +48,8 @@ export class HomeComponent implements OnInit {
     this.isClicked = true;
     this.shortcodeService.getShortenURL(this.link).subscribe(res => {
       this.isClicked = false;
-      this.shortenLink = res['result']['full_short_link2'];
-      this.originalLink = res['result']['original_link'];
+      // this.shortenLink = res['result']['full_short_link2'];
+      // this.originalLink = res['result']['original_link'];
       this.LinksObject = {
         'ip': this.ipaddress,
         'recived': res,
