@@ -21,24 +21,31 @@ fxLayoutGap="30px">
   <input type="text" placeholder="Shorten a link here..." id="shorten-input" (keyup.enter)="onClick()">
   <a mat-button class="shorten-button" (click)="onClick()">Shorten it!</a>
   </div>
-  <!-- output start -->
-  <div id="output" *ngIf="isShorted" fxLayout="row"
-    fxLayoutAlign="space-between center">
-    <a href={{originalLink}} target="_blank">{{originalLink}}</a>
-    <div class="right-section-output"
-    fxFlex fxLayout="row"
-      fxLayoutAlign="end center"
-      fxLayoutGap="10px">
-      <a href={{shortenLink}} target="_blank" style="color:aqua;" id="shortenLink">{{shortenLink}}</a>
-      <a mat-button class="shorten-button" (click)=" copytext()">copy</a>
-    </div>
+  <!-- spinner start -->
+  <div id="spinner" *ngIf="isClicked" [hidden]="errMess">
+    <mat-spinner></mat-spinner> <h4>Preparing . . . Please Wait!</h4>
   </div>
-  <!-- output end -->
+  <!-- spiner end -->
   <!-- error massages -->
   <div *ngIf="errMess">
     <h2>Error</h2>
     <h4>{{errMess}}</h4>
   </div>
+  <!-- output start -->
+  <div *ngFor="let link of shortLinkArray"
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+    class="output">
+    <a href={{link.recived.result.original_link}} target="_blank">{{link.recived.result.original_link}}</a>
+    <div class="right-section-output"
+    fxFlex fxLayout="row"
+      fxLayoutAlign="end center"
+      fxLayoutGap="10px">
+      <a href={{link.recived.result.full_short_link2}} target="_blank" style="color:aqua;" id="shortenLink">{{link.recived.result.full_short_link2}}</a>
+      <a mat-button class="shorten-button" (click)=" copytext()">copy</a>
+    </div>
+  </div>
+  <!-- output end -->
   <!-- end of middle input -->
   <!-- advanced statistics text start -->
   <div fxLayout="column"

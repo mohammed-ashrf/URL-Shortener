@@ -5,7 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
-import { ClipboardModule } from 'ngx-clipboard';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -31,12 +31,12 @@ import 'hammerjs';
     FlexLayoutModule,
     MatButtonModule,
     HttpClientModule,
-    ClipboardModule 
+    MatProgressSpinnerModule
   ],
   providers: [
     ProcessHttpmsgService,
     ShortcodeService,
-    IpAddressService
+    IpAddressService,
   ],
   bootstrap: [AppComponent]
 })
