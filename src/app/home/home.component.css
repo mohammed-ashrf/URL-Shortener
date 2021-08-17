@@ -16,6 +16,11 @@
     width: 92%;
     margin-left: auto;
 }
+/* .get-started-div svg {
+    box-sizing: border-box;
+    /* display: flex;
+    float: right; 
+} */
 .input-container {
     background: url(src\assets\images\bg-shorten-desktop.svg) no-repeat center center;
     -webkit-background-size: cover;
@@ -46,6 +51,14 @@
     color: #fff;
     background-color: hsl(180, 66%, 49%);
 }
+#shorten-button {
+    color: #fff;
+    background-color: hsl(180, 66%, 49%);
+}
+#shorten-button-Data {
+    color: #fff;
+    background-color: hsl(180, 66%, 49%);
+}
 .output {
     background-color: #fff;
     width: 85%;
@@ -70,12 +83,22 @@
     padding-bottom: 70px;
     margin: 0;
 }
+.Advanced-Sattistics-text-div {
+    padding-top: 20px;
+}
 .Advanced-Sattistics-text-div h2 {
-    font-size: 40px;
+    font-size: 32px;
     margin: 0;
 }
+/* .Advanced-Sattistics-text-div p {
+    max-width: 50px;
+} */
 .Gray {
     color: hsl(0, 0%, 60%);
+}
+.center {
+    text-align: center;
+    justify-content: center;
 }
 .cards {
     width: 85%;
@@ -141,5 +164,5 @@
 .Boost-Section h2 {
     margin: 0;
     color: #fff;
-    font-size: 40px;
+    font-size: 30px;
 }

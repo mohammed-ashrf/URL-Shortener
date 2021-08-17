@@ -10,9 +10,9 @@ export class IpAddressService {
 
   constructor(private http: HttpClient,
     private processHTTPMsgService: ProcessHttpmsgService) { }
-  getIpAddress() {
+  getIpAddress()  {
     return this.http
-          .get('https://api.ipify.org/?format=json')
+          .get('https://api64.ipify.org/?format=json')
           .pipe(catchError(this.processHTTPMsgService.handleError));
   }   
 }
