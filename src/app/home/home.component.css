@@ -1,3 +1,69 @@
+@media (max-width: 960px) {
+    #starter-header {
+        font-size: 50px;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    .Starter-Text-Div p{
+        text-align: center;
+    }
+    .get-started-div p svg{
+        width: 100%;
+    }
+    .get-started-div img{
+        width: 100%;
+        height: max-content;
+    }
+}
+
+@media (max-width: 599px) {
+    .output a {
+        text-align: center;
+    }
+    .output hr {
+        /* transform:rotate(90deg);
+        -ms-transform:rotate(90deg); */
+        /* IE 9 */
+        /* -webkit-transform:rotate(90deg); */
+        /* Safari and Chrome */
+        width: 90%;
+    }
+    .Svg {
+        background-color: hsl(257, 27%, 26%);
+        border-radius: 55%;
+        z-index: 1000;
+        position: relative;
+        top: -50px;
+        margin: auto;
+        width: 75px;
+        height: 75px;
+        justify-content: center;
+        text-align: center;
+    }
+    .detailed-records {
+        margin-top: 23px;
+    }
+    .fully-cusomizable {
+        margin-top: 23px;
+    }
+    /* .get-started-div img{
+        display: flex;
+        float: left;
+        position: relative;
+        right: -30%;
+        width: 100%;
+        height: max-content;
+    } */
+}
+@media (min-width: 599px) {
+    .fully-cusomizable {
+        margin-top: 63px;
+    }
+    .detailed-records {
+        margin-top: 30px;
+    }
+}
 .Get-Started {
     background-color:  hsl(180, 66%, 49%);
     border-radius: 25px;
@@ -16,11 +82,15 @@
     width: 92%;
     margin-left: auto;
 }
-/* .get-started-div svg {
-    box-sizing: border-box;
-    /* display: flex;
-    float: right; 
-} */
+.get-started-div img{
+    display: flex;
+    float: left;
+    position: relative;
+    /* right: -100px; */
+    /* z-index: -1; */
+    width: 100%;
+    height: max-content;
+}
 .input-container {
     background: url(src\assets\images\bg-shorten-desktop.svg) no-repeat center center;
     -webkit-background-size: cover;
@@ -111,6 +181,31 @@
     border-radius: 10px;
     padding: 20px;
 }
+.brand-recoginition{
+    height: fit-content;
+    width: 70%;
+}
+.detailed-records {
+    height: fit-content;
+    width: 70%;
+}
+.fully-cusomizable {
+    height: fit-content;
+    width: 70%;
+}
+.card img{
+    background-color: hsl(257, 27%, 26%);
+    border-radius: 55%;
+    z-index: 1000;
+    position: relative;
+    top: -50px;
+    right: -28%;
+    width: 75px;
+    height: 75px;
+    justify-content: center;
+    text-align: center;
+
+}
 .Svg {
     background-color: hsl(257, 27%, 26%);
     border-radius: 55%;
@@ -138,20 +233,10 @@
     width: 40px;
     margin-top: 130px;
 }
-.brand-recoginition{
-    height: fit-content;
-    width: 70%;
-}
-.detailed-records {
-    margin-top: 35px;
-    height: fit-content;
-    width: 70%;
-}
-.fully-cusomizable {
-    margin-top: 63px;
-    height: fit-content;
-    width: 70%;
-}
+.vl {
+    border-left: 6px solid hsl(180, 66%, 49%);
+    height: 50px;
+  }
 .Boost-Section {
     background: url(src\assets\images\bg-boost-desktop.svg) no-repeat center center;
     -webkit-background-size: cover;

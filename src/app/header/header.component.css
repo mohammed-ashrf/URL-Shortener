@@ -20,3 +20,52 @@
     border-radius: 25px;
     color: white;
 }
+.toolbar .hamburger-btn {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+.hover-in-shadow {
+    position: relative;
+    z-index: 1;
+}
+/* .outer-shadow {
+    box-shadow: var(--outer-shadow);
+} */
+.toolbar .hamburger-btn span {
+    display: block;
+    height: 2px;
+    width: 16px;
+    background-color: hsl(0, 0%, 75%);
+    position: relative;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+.toolbar .hamburger-btn .span.top, .toolbar .hamburger-btn .span.bottom {
+    content: '';
+    left: 0;
+    height: 2px;
+    width: 16px;
+    background-color: hsl(0, 0%, 75%);
+}
+.top {
+    top: -10px;
+}
+.bottom {
+    bottom: -4.5px;
+}
+

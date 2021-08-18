@@ -16,3 +16,6 @@
 .Gray {
     color: hsl(0, 0%, 75%);
 }
+.zeroMargin {
+    margin-top: 0;
+}
