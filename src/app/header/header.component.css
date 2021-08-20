@@ -68,4 +68,8 @@
 .bottom {
     bottom: -4.5px;
 }
+.hamburger-btn{
+    position: relative;
+    right: -12%;
+}
 

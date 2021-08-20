@@ -15,7 +15,7 @@
     <a mat-button (click)="openLoginForm()" class="login" fxShow.xs="false">Login</a>
     <a mat-button class="SignUp" fxShow.xs="false">Sign Up</a>
   </div>
-  <div fxFlex fxShow="false" fxShow.xs="true" class="hamburger-btn hover-in-shadow">
+  <div fxFlex (click)="toggleVeiw()" fxShow="false" fxShow.xs="true" class="hamburger-btn hover-in-shadow">
     <span class="span"></span>
     <span class="span top"></span>
     <span class="span bottom"></span>

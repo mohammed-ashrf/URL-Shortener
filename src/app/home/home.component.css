@@ -91,6 +91,33 @@
     width: 100%;
     height: max-content;
 }
+.popup {
+    background-color: hsl(257, 27%, 26%);
+    width: 80%;
+    height: 300px;
+    padding: auto;
+    padding: 40px;
+    border-radius: 15px;
+}
+.popup hr {
+    width: 100%;
+}
+.login {
+    border-radius: 25px;
+    color: #fff;
+}
+.link {
+    color: #fff;
+    cursor: pointer;
+}
+.SignUp {
+    background-color:  hsl(180, 66%, 49%);
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    padding-right: 80px;
+    padding-left: 80px;
+}
 .input-container {
     background: url(src\assets\images\bg-shorten-desktop.svg) no-repeat center center;
     -webkit-background-size: cover;

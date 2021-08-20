@@ -39,6 +39,7 @@ import 'hammerjs';
     ProcessHttpmsgService,
     ShortcodeService,
     IpAddressService,
+    HomeComponent,
   ],
   bootstrap: [AppComponent]
 })

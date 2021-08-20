@@ -2,10 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ShortcodeService } from '../services/shortcode.service';
 import { shortLinkArray } from '../shared/shortLinkArray';
 import { IpAddressService } from '../services/ip-address.service';
+import { visibility } from '../animations/app.animation';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  animations: [
+    visibility(),
+  ]
 })
 export class HomeComponent implements OnInit {
 
@@ -19,6 +23,9 @@ export class HomeComponent implements OnInit {
   LinksObject:any;
   isShorted:boolean = false;
   isClicked:boolean = false;
+  popupVisible:boolean = false;
+  svgVisible:boolean = true;
+  counter = 0 ;
   postedRes:any;
   Info:any;
   copiedLink:any;
@@ -27,6 +34,8 @@ export class HomeComponent implements OnInit {
   shortLinkArray = shortLinkArray;
   shortlinkArrayCopy;
   shortLinksArray;
+  local = window.localStorage;
+  visibility = 'shown';
   constructor(private shortcodeService: ShortcodeService,
     private ipAdressService: IpAddressService) { }
 
@@ -40,15 +49,28 @@ export class HomeComponent implements OnInit {
       console.log ('there is no link');
       window.localStorage.setItem('Placeholder','placeholder');
     }else {
-      let data = JSON.parse(localStorage.getItem("dataSource"));
-      console.log(data);
-      this.shortLinksArray = JSON.parse(localStorage.getItem("linksArray"));
+      // let data = JSON.parse(localStorage.getItem("dataSource"));
+      // console.log(data);
+      // let keys = Object.keys(window.localStorage);
+      // console.log(keys);
+      // for (let key of keys) {
+        // this.shortLinksArray = JSON.parse(window.localStorage.getItem(`${key}`));
+        // }
+      this.shortLinksArray = JSON.parse(window.localStorage.getItem('linksArray'));
       console.log(this.shortLinksArray);
-      console.log(window.localStorage)
+      console.log(window.localStorage);
     }
-    
   }
 
+  hamburgerClick() {
+    if(this.svgVisible == true) {
+      this.popupVisible = true;
+      this.svgVisible = false;
+    }else {
+      this.svgVisible = true;
+      this.popupVisible = false;
+    }
+  }
   copytext(val) {
     let button= document.getElementById('shorten-button');
     let selBox = document.createElement('textarea');
@@ -71,7 +93,7 @@ export class HomeComponent implements OnInit {
     console.log(this.link);
     this.isClicked = true;
     this.shortcodeService.getShortenURL(this.link).subscribe(res => {
-      window.localStorage.setItem('dataSource',JSON.stringify(res));
+      // window.localStorage.setItem('dataSource',JSON.stringify(res));
       this.isClicked = false;
       this.shortenLink = res['result']['full_short_link2'];
       this.originalLink = res['result']['original_link'];
@@ -82,6 +104,8 @@ export class HomeComponent implements OnInit {
       this.shortlinkArrayCopy = this.shortLinkArray;
       this.shortlinkArrayCopy.push(this.LinksObject);
       window.localStorage.setItem('linksArray',JSON.stringify(this.shortlinkArrayCopy));
+      // window.localStorage.setItem(`link${this.counter}`,JSON.stringify(res));
+      this.counter += 1;
       // console.log(this.shortLinkArray);
       this.shortcodeService.getInfo(res['result']['code']).subscribe(resInfo => {
         this.Info = resInfo;
