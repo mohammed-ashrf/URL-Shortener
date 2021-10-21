@@ -25,7 +25,6 @@ export class HomeComponent implements OnInit {
   isClicked:boolean = false;
   popupVisible:boolean = false;
   svgVisible:boolean = true;
-  counter = 0 ;
   postedRes:any;
   Info:any;
   copiedLink:any;
@@ -92,6 +91,10 @@ export class HomeComponent implements OnInit {
     this.link = this.input.value;
     console.log(this.link);
     this.isClicked = true;
+    var count = localStorage.getItem("count")==null?1:localStorage.getItem("count");
+    count=Number(count)+1;
+    count.toString;
+    localStorage.setItem("count", JSON.stringify(count));
     this.shortcodeService.getShortenURL(this.link).subscribe(res => {
       // window.localStorage.setItem('dataSource',JSON.stringify(res));
       this.isClicked = false;
@@ -105,7 +108,6 @@ export class HomeComponent implements OnInit {
       this.shortlinkArrayCopy.push(this.LinksObject);
       window.localStorage.setItem('linksArray',JSON.stringify(this.shortlinkArrayCopy));
       // window.localStorage.setItem(`link${this.counter}`,JSON.stringify(res));
-      this.counter += 1;
       // console.log(this.shortLinkArray);
       this.shortcodeService.getInfo(res['result']['code']).subscribe(resInfo => {
         this.Info = resInfo;
