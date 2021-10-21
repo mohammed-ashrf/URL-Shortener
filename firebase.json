@@ -1,0 +1,20 @@
+{
+  "hosting": {
+    "site": "url-shortner-1e501",
+    "public": "dist/URL-Shortener",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "database": {
+    "rules": "database.rules.json"
+  }
+}
